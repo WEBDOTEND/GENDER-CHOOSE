@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+img{
+    width: 250px;
+    user-select: none;
+}
+
+h2{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+.gender{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+label{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px 15px 25px;
+    gap: 5px;
+    user-select: none;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    transition: 0.6s;
+}
+
+label:hover{
+    background: var(--gclr);
+}
+
+input{
+    appearance: none;
+}
+
+i{
+    position: relative;
+    top: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+}
+
+i::before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    height: 2px;
+    width: 100%;
+    transform: rotate(45deg);
+}
+
+i::after{
+    content: '';
+    position: absolute;
+    background: #fff;
+    height: 2px;
+    width: 100%;
+    transform: rotate(315deg);
+}
+
+ input:checked ~ i::before{
+    width: 50%;
+    transform: rotate(45deg) translate(-4px,9px);
+}
+
+input:checked ~ i::before,input:checked ~ i::after{
+    background: #fff;
+    transition: 0.6s;
+}
+
+span{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+input:checked ~ span{
+    transition: 0.6s;
+}
